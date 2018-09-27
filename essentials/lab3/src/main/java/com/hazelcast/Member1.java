@@ -1,5 +1,7 @@
 package com.hazelcast;
 
+import java.util.Map;
+
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 
@@ -9,7 +11,7 @@ public class Member1 {
         HazelcastInstance node = Hazelcast.newHazelcastInstance();
 
         // Create a Hazelcast backed map
-
+        Map m = node.getMap("kevin");
 
         // Write the 1000 elements to the map
         for (int i = 0; i < 1000; i++) {
@@ -17,7 +19,7 @@ public class Member1 {
             String value = "value-" + String.valueOf(i);
 
             // Add the given key and value to the map
-
+            m.put(key, value);
         }
     }
 }

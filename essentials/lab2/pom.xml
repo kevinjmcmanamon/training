@@ -15,11 +15,10 @@
   </parent>
 
   <dependencies>
-    <dependency>
-      <groupId>com.hazelcast</groupId>
-      <artifactId>hazelcast</artifactId>
-    </dependency>
-    <!-- Add the Hazelcast client dependency -->
-
+	<!-- Add the Hazelcast client dependency -->
+	<dependency>
+		<groupId>com.hazelcast</groupId>
+		<artifactId>hazelcast-client</artifactId>
+	</dependency>
   </dependencies>
 </project>

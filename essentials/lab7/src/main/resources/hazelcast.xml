@@ -21,7 +21,9 @@
   <map name="training">
 
     <!-- Configure eviction for 5 elements per member -->
-
+   <time-to-live-seconds>20</time-to-live-seconds>   
+   <max-idle-seconds>10</max-idle-seconds>
+   <evection-policy>LRU</evection-policy>
 
   </map>
 

@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hazelcast xsi:schemaLocation="http://www.hazelcast.com/schema/config hazelcast-config-3.10.xsd"
-           xmlns="http://www.hazelcast.com/schema/config"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<hazelcast
+	xsi:schemaLocation="http://www.hazelcast.com/schema/config hazelcast-config-3.10.xsd"
+	xmlns="http://www.hazelcast.com/schema/config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-  <network>
-    <join>
-      <!-- Deactivate multicast discovery which is enabled by default -->
+	<network>
+		<port auto-increment="false">5701</port>
+		<join>
+			<!-- Deactivate multicast discovery which is enabled by default -->
+			<multicast enabled="false" />
 
+			<!-- Configure the node to be bound to localhost only -->
+			<tcp-ip enabled="true">
+				<interface>127.0.0.1</interface>
+			</tcp-ip>
 
-      <!-- Configure the node to be bound to localhost only -->
-
-
-    </join>
-  </network>
+		</join>
+	</network>
 
 </hazelcast>
